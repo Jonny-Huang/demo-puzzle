@@ -1,0 +1,17 @@
+<div fxLayout="column" fxFill>
+  <div class="header">
+    <home-header></home-header>
+  </div>
+  <div fxLayout="row" class="conetent">
+    <div class="aside">
+      <home-aside></home-aside>
+    </div>
+    <div fxFlex>
+      <!--<home-main></home-main>-->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div [@todolistState]="homeService.todolist_State" class="todo">
+    <todo-list></todo-list>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+$primary-color-dark: #303F9F;
+$primary-color: #3F51B5;
+$primary-color-light: #C5CAE9;
+$primary-color-text: #FFFFFF;
+$accent-color: #448AFF;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$divider-color: #BDBDBD;
+
+$information-title-color: #80C6FF;
+$information-content-color: #2196F3;
+$warning-title-color: #FFDF80;
+$warning-content-color: #FFC107;
+$error-title-color: #FF80AA;
+$error-content-color: #E91E63;
+
+@mixin parentPanel {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin contentPanel {
+  background-color: $primary-color-text;
+  overflow: auto;
+}
+
+@mixin contentPanelNoScrollbar {
+  background-color: $primary-color-text;
+  overflow: hidden;
+}

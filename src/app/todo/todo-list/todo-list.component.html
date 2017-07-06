@@ -1,0 +1,31 @@
+<div class="layout">
+  <md-card>
+    <div fxLayout="column" class="todo" [@editTodoState]="editTodo_State">
+      <h4>待辦事項</h4>
+      <md-divider></md-divider>
+      <md-list class="scrollbar">
+        <ng-container *ngFor="let item of todoService.message_list">
+          <md-list-item class="doto-item" *ngIf="!item.isCompleted" @flyInOut>
+            <md-checkbox [(ngModel)]="item.isCompleted"></md-checkbox>
+            <span>{{item.Content}}</span>
+          </md-list-item>
+        </ng-container>
+      </md-list>
+      <md-divider></md-divider>
+      <div class="edit">
+        <md-input-container>
+          <textarea mdInput maxlength="50" placeholder="內容" [(ngModel)]="message_content">
+          </textarea>
+          <md-hint align="end">0 / 50</md-hint>
+        </md-input-container>
+      </div>
+      <button md-fab class="btn-save" (click)="onSave()">
+        <md-icon>save</md-icon>
+      </button>
+    </div>
+    <div class="bottom"></div>
+    <button md-fab class="btn-edit" (click)="changeEditDoTo()" [@editButtonState]="editTodo_State">
+      <md-icon>add</md-icon>
+    </button>
+  </md-card>
+</div>

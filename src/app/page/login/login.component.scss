@@ -1,0 +1,35 @@
+.layout {
+  color: gray;
+  background-color: #455A64;
+  md-icon {
+    font-size: 48px;
+    transform: translate(-48px, -120px) scale(4, 4);
+  }
+  h1 {
+    font-size: 68px;
+    margin-bottom: 48px;
+    padding-right: 68px;
+  }
+  .btn {
+    border-radius: 50px;
+    color: gainsboro;
+    background: transparent;
+    border: 2px solid gainsboro;
+    font-size: 24px;
+    line-height: 40px;
+    padding: 12px 36px;
+    cursor: pointer;
+    margin: 12px;
+  }
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn:visited {
+  color: white;
+  border: 2px solid white;
+  outline: none;
+}
+
+md-input-container {
+  transform: scale(1.4,1.4);
+  margin-bottom: 24px;
+}

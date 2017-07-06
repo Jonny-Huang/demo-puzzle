@@ -1,0 +1,13 @@
+<div class="layout" fxLayout="column" fxLayoutAlign="center center" fxFill>
+  <h1>Login</h1>
+  <md-input-container>
+    <input mdInput placeholder="帳號">
+  </md-input-container>
+  <md-input-container>
+    <input type="password" mdInput placeholder="密碼">
+  </md-input-container>
+  <div fxLayout="row">
+    <a (click)="onlogin()" class="btn">Login</a>
+    <a (click)="onReset()" class="btn">Reset</a>
+  </div>
+</div>

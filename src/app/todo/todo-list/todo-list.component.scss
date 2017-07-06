@@ -1,0 +1,69 @@
+.layout {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+}
+
+md-card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.todo {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+}
+
+.btn-edit {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: white;
+}
+
+.edit {
+  position: absolute;
+  left: 0px;
+  bottom: -120px;
+  height: 120px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  md-input-container {
+    width: 100%;
+  }
+}
+
+.btn-save {
+  position: absolute;
+  right: 0px;
+  bottom: -160px;
+}
+
+.bottom {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 12px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+md-list {
+  // overflow-y: auto;
+  // padding-bottom: 48px;
+  margin-right: -12px;
+  overflow-x: hidden;
+}
+
+.doto-item {
+  md-checkbox {
+    margin-right: 12px;
+  }
+}
+
+

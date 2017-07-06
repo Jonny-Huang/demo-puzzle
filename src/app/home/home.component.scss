@@ -1,0 +1,24 @@
+@import './home.scss';
+
+.header {
+  height: $header-height;
+  background-color: pink;
+}
+.conetent {
+  height: calc(100% - #{$header-height});
+  background-color: green;
+}
+
+.aside {
+  width: $aside-width;
+  background-color: gray;
+}
+.todo {
+  // background-color: pink;
+  position: absolute;
+  top: $header-height;
+  // right: 0px;
+  z-index: 10;
+  height: calc(100% - #{$header-height});
+  // width: 320px;
+}

@@ -1,0 +1,39 @@
+<div class="layout">
+  <md-toolbar color="primary">
+    <md-toolbar-row>
+      <span>Third Line</span>
+      <span class="spacer"></span>
+      <button md-icon-button class="icon" routerLink="/main" mdTooltip="首頁" mdTooltipPosition="above">
+        <md-icon>home</md-icon>
+      </button>
+      <button md-icon-button class="icon" (click)="navAbout()" mdTooltip="關於" mdTooltipPosition="above">
+        <md-icon>info</md-icon>
+      </button>
+      <div>
+        <button md-icon-button class="icon" (click)="changeDoToList()" mdTooltip="待辦事項" mdTooltipPosition="above">
+          <md-icon>format_list_numbered</md-icon>
+        </button>
+        <md-chip-list *ngIf="userProfileService.todolist_count">
+          <md-chip>{{todoService.message_list.length}}</md-chip>
+        </md-chip-list>
+      </div>
+      <button md-icon-button [mdMenuTriggerFor]="menu" mdTooltip="設定" mdTooltipPosition="above">
+        <md-icon>settings_input_component</md-icon>
+      </button>
+      <md-menu #menu="mdMenu">
+        <button md-menu-item (click)="onLogout()">
+          <md-icon>directions_run</md-icon>
+          <span>登出</span>
+        </button>
+        <button md-menu-item disabled>
+          <md-icon>voicemail</md-icon>
+          <span>Check voicemail</span>
+        </button>
+        <button md-menu-item>
+          <md-icon>notifications_off</md-icon>
+          <span>Disable alerts</span>
+        </button>
+      </md-menu>
+    </md-toolbar-row>
+  </md-toolbar>
+</div>
